@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer type="module" src="index.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -17,15 +18,34 @@
           <input class="form-input" type="text" placeholder="Surname" />
           <input class="form-input" type="date" placeholder="Birth date" />
           <input class="form-input" type="email" placeholder="Email" />
-          <input class="form-input" type="password" placeholder="Password" />
-          <input
-            class="form-input"
-            type="password"
-            placeholder="Confirm password"
-          />
+          <div class="password-wrapper">
+            <input
+              class="form-input password-input"
+              type="password"
+              id="password"
+              placeholder="Password"
+            />
+            <label
+              for="password"
+              class="visibility-btn visibility-btn-off"
+            ></label>
+          </div>
+          <div class="password-wrapper">
+            <input
+              class="form-input password-input"
+              type="password"
+              id="confirm"
+              placeholder="Confirm password"
+            />
+            <label
+              for="confirm"
+              class="visibility-btn visibility-btn-off"
+            ></label>
+          </div>
           <button class="submit-btn" type="submit">Submit</button>
         </form>
       </div>
+      <div class="test"></div>
     </main>
   </body>
 </html>
