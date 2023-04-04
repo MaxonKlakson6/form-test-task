@@ -11,8 +11,46 @@ main {
   border-radius: 5px;
 }
 
+.form-title {
+  margin-bottom: 10px;
+  font-family: Haettenschweiler, sans-serif;
+  text-align: center;
+}
+
 .sign-up-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.form-input {
+  width: 300px;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.form-input:focus {
+  transition: 0.3s;
+  box-shadow: 0 0 2px 2px #cac2c2;
+}
+
+.submit-btn {
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid rgb(86, 178, 128);
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: rgb(86, 178, 128);
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  transition: 0.3s;
+  background-color: #fff;
+  color: rgb(86, 178, 128);
 }
