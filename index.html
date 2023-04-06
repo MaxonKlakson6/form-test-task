@@ -14,30 +14,42 @@
       <div class="form-wrapper">
         <h3 class="form-title">Sign up</h3>
         <form class="sign-up-form" id="sign-up-form">
-          <input
-            class="form-input"
-            type="text"
-            placeholder="Name"
-            name="name"
-          />
-          <input
-            class="form-input"
-            type="text"
-            placeholder="Surname"
-            name="surname"
-          />
-          <input
-            class="form-input"
-            type="date"
-            placeholder="Birth date"
-            name="birthDate"
-          />
-          <input
-            class="form-input"
-            type="email"
-            placeholder="Email"
-            name="email"
-          />
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              placeholder="Name"
+              name="name"
+            />
+            <div id="notice-name" class="notice-error"></div>
+          </div>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              placeholder="Surname"
+              name="surname"
+            />
+            <div id="notice-surname" class="notice-error"></div>
+          </div>
+          <div>
+            <input
+              class="form-input"
+              type="date"
+              placeholder="Birth date"
+              name="birthDate"
+            />
+            <div id="notice-birthDate" class="notice-error"></div>
+          </div>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              placeholder="Email"
+              name="email"
+            />
+            <div id="notice-email" class="notice-error"></div>
+          </div>
           <div class="password-wrapper">
             <input
               class="form-input password-input"
@@ -46,6 +58,7 @@
               placeholder="Password"
               name="password"
             />
+            <div id="notice-password" class="notice-error"></div>
             <label
               for="password"
               class="visibility-btn visibility-btn-off"
@@ -59,6 +72,7 @@
               placeholder="Confirm password"
               name="confirm"
             />
+            <div id="notice-confirm" class="notice-error"></div>
             <label
               for="confirm"
               class="visibility-btn visibility-btn-off"
