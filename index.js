@@ -46,9 +46,9 @@ useVisibilityInputs("visibility-btn");
 useForm(form);
 
 const addFormSubmition = (formId, submitCallback) => {
-  const form = document.querySelector(`#${formId}`);
+  const formNode = document.querySelector(`#${formId}`);
 
-  form.addEventListener("submit", submitCallback);
+  formNode.addEventListener("submit", submitCallback);
 };
 
 const validateSignUpForm = (form) => {
@@ -97,13 +97,13 @@ const validateSignUpForm = (form) => {
 };
 
 const createErrorPrinter = () => {
-  const some = Object.entries(form).map(([name]) => ({
+  const nodeList = Object.entries(form).map(([name]) => ({
     name,
     node: (noticeBlock = document.querySelector(`#notice-${name}`)),
   }));
 
   return (errors) => {
-    some.forEach(({ name, node }) => {
+    nodeList.forEach(({ name, node }) => {
       if (!errors[name]) {
         node.innerHTML = "";
       } else {
