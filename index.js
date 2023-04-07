@@ -77,11 +77,15 @@ const validateSignUpForm = (form) => {
     errors.birthDate = "Today is a max available date";
   }
 
-  if (!form.email.toLowerCase().match(emailRegExp)) {
+  if (!form.email) {
+    errors.email = "Email is a required field";
+  } else if (!form.email.toLowerCase().match(emailRegExp)) {
     errors.email = "Email must be an email";
   }
 
-  if (!form.password.match(passwordRegExp)) {
+  if (!form.password) {
+    errors.password = "Password is a required field";
+  } else if (!form.password.match(passwordRegExp)) {
     errors.password = "Wrong password";
   }
 
